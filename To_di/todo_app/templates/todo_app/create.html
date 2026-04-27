@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Page</title>
+  <style>
+    body{
+      background-color: rgb(151, 190, 224);
+    }
+    .boxx{
+      height: 80px;
+      width:300px;
+      background-color: white;
+      border-radius: 5px;
+      border:7px;
+      border-color: rgb(142, 142, 238);
+     padding-left: 5px;
+     padding-top: 2px;
+     margin-left: 2px;
+     margin-top: 5px;
+  text-align: center;
+  
+    }
+    .box{
+      height: 520px;
+      width:400px;
+      background-color: rgb(74, 107, 192);
+      border-radius: 5px;
+      border:7px;
+      border-color: rgb(149, 149, 179);
+     
+      padding-left: 44px;
+       text-align: center;
+    }
+    button{
+      margin-left: -92px;
+      background-color: rgb(10, 10, 150);
+      width: 93px;
+      height: 42px;
+      border: none;
+      border-radius: 5px;
+     color: white;
+     font-size: larger;
+    }
+  h1{
+    color: white;
+    margin-left: -37px;
+    padding-top: 17px;
+  }
+
+  </style>
+</head>
+
+<body>
+  <div class="box">
+  <h1>Add New Task</h1>
+  <form method="post">
+   {%csrf_token%}
+   <div class="boxx">
+   <label for="">Task Name: </label>
+   <br>
+   <br>
+   <input type="text" placeholder="Enter Your task" name="name" >
+   <br><br>
+   </div>
+   <br>
+   <br>
+    <div class="boxx">
+   <label for=""> Description </label>
+   <br>
+   <br>
+   <textarea name="descript" >Add Text</textarea>
+   <br><br>
+   </div>
+   <br>
+   <br>
+    <div class="boxx">
+   <label for="">Date </label>
+   <br>
+   <br>
+   <input type="date" placeholder="Enter Your Date" name="date" >
+   <br><br>
+   </div>
+   <br>
+   <br>
+<button type="submit">Add Task</button>
+  </form>
+</div>
+</body>
+</html>
